@@ -1,8 +1,7 @@
-# Parking lot
+# Controle de Estoque (Vestuário) - Algoritmos de Ordenação
 
-**Número da Lista**: 1  
-**Conteúdo da Disciplina**: FGA0124 - PROJETO DE ALGORITMOS - T01  
-
+## Sobre 
+Sistema prático de gerenciamento e controle de estoque para uma loja de roupas, desenvolvido para demonstrar e comparar a eficiência de diferentes algoritmos de ordenação na disciplina de **Estruturas de Dados e Algoritmos 2 (EDA2)**.
 
 ## Alunos
 
@@ -10,19 +9,53 @@
 <div align = "center">
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/BiancaPatrocinio7"><img style="border-radius: 50%;" src="https://github.com/BiancaPatrocinio7.png" width="190;" alt=""/><br /><sub><b>Bianca Patrocínio</b></sub></a><br /><a href="Link git" title="Rocketseat"></a></td>
-    <td align="center"><a href="https://github.com/leticiatmartins"><img style="border-radius: 50%;" src="https://github.com/leticiatmartins.png" width="190px;" alt=""/><br /><sub><b>Leticia Torres </b></sub></a><br />
+    <td align="center"><a href="https://github.com/alvesingrid"><img style="border-radius: 50%;" src="https://github.com/alvesingrid.png" width="190;" alt=""/><br /><sub><b>Ingrid Alves</b></sub></a><br /><a href="Link git" title="Rocketseat"></a></td>
+    <td align="center"><a href="https://github.com/Ericcs10"><img style="border-radius: 50%;" src="https://github.com/Ericcs10.png" width="190px;" alt=""/><br /><sub><b>Leticia Torres </b></sub></a><br />
   </tr>
 </table>
 
-| Matrícula   | Aluno                             |
-| ----------- | ---------------------------------- |
-| 22/1008801  | Bianca Patrocínio Castro           |
-| 20/2016702  | Leticia Torres Soares Martins      |
-</div>
+## 👥 Autores
 
-## Sobre 
-O sistema de estacionamento simula a alocação de vagas de estacionamento para clientes em um shopping, com 18 vagas e 6 lojas, utilizando algoritmos de grafos. O objetivo é encontrar a vaga mais próxima de uma loja específica usando a busca em largura (BFS).
+| Matrícula |Nome|
+| :--- | :--- |
+| 202045348 | **Ingrid Alves Rocha**|
+| | **Eric Camargo da Silva** |
+
+---
+
+## 👕 Sobre o Projeto e Modelagem
+
+O sistema gerencia um acervo de peças de roupas. Cada item no estoque é modelado contendo identificadores práticos para filtragem e listagem:
+* `código` (inteiro único)
+* `descrição` e `tamanho` (strings)
+* `preço` (ponto flutuante)
+* `quantidade` em estoque (inteiro)
+
+---
+
+## 📚 Algoritmos Implementados e Aplicação Prática
+
+Cada método de ordenação foi escolhido para suprir uma necessidade de listagem específica do estoque:
+
+### 1. Insertion Sort (Filtro por Preço)
+* **Uso Prático**: Ideal para ordenar subconjuntos ou itens adicionados ao carrinho do menor para o maior preço.
+* **Teoria**: Algoritmo simples, natural e estável. É amplamente utilizado no cotidiano (como na organização de cartas em jogos de tranca e buraco). Possui complexidade $O(n^2)$, mas garante o menor número de trocas e comparações caso os dados já estejam parcialmente ordenados.
+
+### 2. Bubble Sort (Auditoria de Quantidade)
+* **Uso Prático**: Empregado para ordenar o estoque com base na quantidade disponível, permitindo visualizar rapidamente peças esgotadas.
+* **Teoria**: Compara e troca elementos adjacentes sucessivamente. Os itens maiores vão "borbulhando" para o final do vetor a cada iteração, repetindo o processo até que o conjunto esteja ordenado.
+
+### 3. Shell Sort (Listagem Principal por Código)
+* **Uso Prático**: Utilizado para a ordenação veloz de todo o catálogo de peças através de seus códigos de identificação.
+* **Teoria**: Criado por Donald Shell em 1959, é considerado o algoritmo mais eficiente entre os de complexidade quadrática. Opera como um refinamento do Insertion Sort, aplicando inserções em múltiplos segmentos espaçados do vetor.
+
+---
+
+## 🚀 Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/indalvess/eda2-estoque-ordenacao.git](https://github.com/indalvess/eda2-estoque-ordenacao.git)
 
 ## Screenshots
 <p align="center">
