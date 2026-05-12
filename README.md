@@ -8,7 +8,7 @@ Sistema prático de gerenciamento e controle de estoque para uma loja de roupas,
 <table>
   <tr>
     <td align="center"><a href="https://github.com/alvesingrid"><img style="border-radius: 50%;" src="https://github.com/alvesingrid.png" width="190;" alt=""/><br /><sub><b>Ingrid Alves</b></sub></a><br /><a href="Link git" title="Rocketseat"></a></td>
-    <td align="center"><a href="https://github.com/Ericcs10"><img style="border-radius: 50%;" src="https://github.com/Ericcs10.png" width="190px;" alt=""/><br /><sub><b>Leticia Torres </b></sub></a><br />
+    <td align="center"><a href="https://github.com/Ericcs10"><img style="border-radius: 50%;" src="https://github.com/Ericcs10.png" width="190px;" alt=""/><br /><sub><b>Eric Camargo </b></sub></a><br />
   </tr>
 </table>
 </div>
@@ -18,7 +18,7 @@ Sistema prático de gerenciamento e controle de estoque para uma loja de roupas,
 | Matrícula | Nome |
 | :--- | :--- |
 | 202045348 | **Ingrid Alves Rocha** |
-| | **Eric Camargo da Silva** |
+| 202016168 | **Eric Camargo da Silva** |
 
 ## Sobre a Modelagem
 
