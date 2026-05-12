@@ -68,3 +68,83 @@ void imprimir_estoque(PecaRoupa estoque[], int n) {
     }
     printf("-----------------------------------------------------------------------\n");
 }
+
+// ============================================================
+// FUNÇÕES DE BENCHMARK — versões instrumentadas para análise
+// Cada função ordena uma CÓPIA do estoque e retorna métricas.
+// ============================================================
+
+// Benchmark do Insertion Sort (ordena por preço)
+Metricas benchmark_insertion_sort(PecaRoupa estoque[], int n) {
+    // Cria cópia local para não alterar o original
+    PecaRoupa copia[n];
+    for (int k = 0; k < n; k++) copia[k] = estoque[k];
+
+    Metricas m = {0, 0};
+    int i, j;
+    PecaRoupa chave;
+
+    for (i = 1; i < n; i++) {
+        chave = copia[i];
+        j = i - 1;
+        while (j >= 0 && (m.comparacoes++, copia[j].preco > chave.preco)) {
+            copia[j + 1] = copia[j];
+            m.trocas++;
+            j--;
+        }
+        if (j >= 0) m.comparacoes++; // última comparação falsa do while
+        copia[j + 1] = chave;
+    }
+    return m;
+}
+
+// Benchmark do Bubble Sort (ordena por quantidade)
+Metricas benchmark_bubble_sort(PecaRoupa estoque[], int n) {
+    PecaRoupa copia[n];
+    for (int k = 0; k < n; k++) copia[k] = estoque[k];
+
+    Metricas m = {0, 0};
+    int i, j, trocou;
+    PecaRoupa temp;
+
+    for (i = 0; i < n - 1; i++) {
+        trocou = 0;
+        for (j = 0; j < n - i - 1; j++) {
+            m.comparacoes++;
+            if (copia[j].quantidade > copia[j + 1].quantidade) {
+                temp = copia[j];
+                copia[j] = copia[j + 1];
+                copia[j + 1] = temp;
+                m.trocas++;
+                trocou = 1;
+            }
+        }
+        if (!trocou) break;
+    }
+    return m;
+}
+
+// Benchmark do Shell Sort (ordena por código)
+Metricas benchmark_shell_sort(PecaRoupa estoque[], int n) {
+    PecaRoupa copia[n];
+    for (int k = 0; k < n; k++) copia[k] = estoque[k];
+
+    Metricas m = {0, 0};
+    int gap, i, j;
+    PecaRoupa chave;
+
+    for (gap = n / 2; gap > 0; gap /= 2) {
+        for (i = gap; i < n; i++) {
+            chave = copia[i];
+            j = i;
+            while (j >= gap && (m.comparacoes++, copia[j - gap].codigo > chave.codigo)) {
+                copia[j] = copia[j - gap];
+                m.trocas++;
+                j -= gap;
+            }
+            if (j >= gap) m.comparacoes++; // última comparação falsa
+            copia[j] = chave;
+        }
+    }
+    return m;
+}

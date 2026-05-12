@@ -4,7 +4,6 @@ Sistema prático de gerenciamento e controle de estoque para uma loja de roupas,
 
 ## Alunos
 
-
 <div align = "center">
 <table>
   <tr>
@@ -12,12 +11,13 @@ Sistema prático de gerenciamento e controle de estoque para uma loja de roupas,
     <td align="center"><a href="https://github.com/Ericcs10"><img style="border-radius: 50%;" src="https://github.com/Ericcs10.png" width="190px;" alt=""/><br /><sub><b>Leticia Torres </b></sub></a><br />
   </tr>
 </table>
+</div>
 
 ## Autores
 
-| Matrícula |Nome|
+| Matrícula | Nome |
 | :--- | :--- |
-| 202045348 | **Ingrid Alves Rocha**|
+| 202045348 | **Ingrid Alves Rocha** |
 | | **Eric Camargo da Silva** |
 
 ## Sobre a Modelagem
@@ -48,27 +48,43 @@ Cada método foi implementado visando resolver um problema específico de organi
 
 ---
 
+## Benchmark de Desempenho
+
+O sistema conta com um modo de **benchmark** (opção 5 do menu) que executa os três algoritmos sobre o estado atual do estoque e exibe, lado a lado, o número de **comparações** e **trocas** realizadas por cada um — sem alterar os dados exibidos.
+
+Esse recurso permite observar na prática o que a teoria prevê sobre complexidade de algoritmos. Exemplo de saída com o estoque inicial (6 itens em ordem aleatória):
+
+| Algoritmo      | Comparações | Trocas |
+|----------------|-------------|--------|
+| Insertion Sort | 9           | 5      |
+| Bubble Sort    | 15          | 5      |
+| Shell Sort     | 8           | 3      |
+
+> O Shell Sort tende a realizar menos operações por trabalhar com intervalos (*gaps*) decrescentes, aproximando-se de $O(n \log n)$ na prática, enquanto Bubble Sort sempre percorre todas as comparações possíveis.
+
+---
+
 ## Como Executar
 
 1. Clone o repositório para a sua máquina:
-   ```bash
+```bash
    git clone https://github.com/indalvess/eda2-estoque-ordenacao.git
-   ```
+```
 
 2. Acesse o diretório raiz do projeto:
-   ```bash
+```bash
    cd eda2-estoque-ordenacao
-   ```
+```
 
 3. Compile os arquivos de código-fonte usando o `gcc`:
-   ```bash
+```bash
    gcc -o estoque src/ordenacao.c src/main.c
-   ```
+```
 
 4. Execute a aplicação:
-   ```bash
+```bash
    ./estoque
-   ```
+```
 
 ## Screenshots
 <p align="center">
@@ -89,4 +105,4 @@ Cada método foi implementado visando resolver um problema específico de organi
 <a href="https://youtu.be/PoJ3FK-J3wM?si=VLjQ5nK-w6U8Dh7-"><img src="https://i.imgur.com/nNBEJk2.png" width="50%"></a>
 </div>
 
-<font size="3"><p style="text-align: center">Autor: [Ingrid Alves](https://github.com/alvesingrid) e [Eric Camargo](https://github.com/Ericcs10).</p></font>
+<font size="3"><p style="text-align: center">Autor: <a href="https://github.com/alvesingrid">Ingrid Alves</a> e <a href="https://github.com/Ericcs10">Eric Camargo</a>.</p></font>
